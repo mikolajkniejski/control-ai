@@ -89,15 +89,15 @@ export default function Home() {
                   className="block text-sm font-medium text-gray-700 mb-2"
                   htmlFor="address"
                 >
-                  Postal Code
+                  Address
                 </label>
-                <input
+                <textarea
                   id="address"
-                  type="text"
+                  // type="text"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   className="w-full p-3 border border-gray-300 focus:ring-2 focus:ring-blue-500"
-                  placeholder="Your postal code"
+                  placeholder="Your address"
                   required
                 />
               </div>
@@ -141,9 +141,12 @@ export default function Home() {
 
               {/* Template Preview */}
               {template && (
-                <div className="bg-gray-100 p-4 text-sm">
+                <div>
                   <h3 className="font-medium mb-2">Preview:</h3>
-                  <pre className="whitespace-pre-wrap">{template}</pre>
+
+                  <div className="bg-gray-100 p-4 text-sm">
+                    <pre className="whitespace-pre-wrap">{template}</pre>
+                  </div>
                 </div>
               )}
 
